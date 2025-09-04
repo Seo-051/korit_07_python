@@ -18,6 +18,9 @@ def 함수_이름 (매개변수1, 매개변수2):
 
 변수 = 함수_이름(argument1, argument2)
 '''
+from importlib.util import source_hash
+
+
 # 함수 정의
 def display_name(name):
     print(f'당신의 이름은 {name} 입니다.')
@@ -51,6 +54,7 @@ print() / type() / int() / float() / input()
 
 # 메서드의 예시
 # eng_name = input('당신의 이름을 영어로 입력하시오>> ')
+
 '''
 이상의 코드는 함수 호출을 해서 그 결과 값을 eng_name이라는 변수에 담았다
 '''
