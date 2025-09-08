@@ -42,6 +42,7 @@ import numbers
 # li2 = [ 100, 3.14, 'hello' ]    # list 선언 및 초기화 방법 # 1
 # li3 = list( [ 4, 5, 6, 7, 8, 9, 0 ])    # list 선언 및 초기화 방법 # 2
 # print(li3[0:4:2])   # 0번지부터 4번지 앞까지, 2씩 증가시키면서. # 결과값 :  [ 4, 6 ]
+
 '''
 41 번 라인의 코드를 Java 버전으로 생각해보면
 String strExample = new String("안녕하세요"); 와 같겠네요

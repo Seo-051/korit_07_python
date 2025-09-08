@@ -20,7 +20,6 @@ def 함수_이름 (매개변수1, 매개변수2):
 '''
 from importlib.util import source_hash
 
-
 # 함수 정의
 def display_name(name):
     print(f'당신의 이름은 {name} 입니다.')

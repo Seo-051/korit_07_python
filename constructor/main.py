@@ -142,13 +142,15 @@ class Student:
         self.name = name
 
     def set_age(self, age):
-        self.age = age
+        if 0 <= age <= 200:
+            self.age = age
 
     def set_address(self, address):
         self.address = address
 
     def set_score(self, score):
-        self.score = score
+        if 0.0 < score <= 4.5:
+            self.score = score
     # getter 예시
     def get_name(self):
         return self.name
@@ -180,3 +182,6 @@ student1 객체를 생성하고,
 getter만을 활용하여,
 김일 학생의 나이는 20 살로, 파이썬 과목의 점수는 4.5점입니다. 라고 출력하시오.
 '''
+student1.set_age(300)
+print(f'{student1.get_age()}')      # 결과값 : 20으로 대입 자체가 일어나지 않음
+
