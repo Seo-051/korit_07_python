@@ -421,6 +421,7 @@ print(add_numbers2(last_num)) # call4() 유형
 숫자 몇 까지 입력하시겠습니까 >> 10
 '''
 
+
 # def add_numbers(n):
 #     li = []
 #     for i in range(n):
@@ -456,10 +457,10 @@ print(add_numbers2(last_num)) # call4() 유형
 #
 # add_numbers3(10, hello)
 
-#---------------------------
+# ---------------------------
 
 def count_even_odd(numbers):
-    count =0
+    count = 0
 
     for i in range(len(numbers)):
         if i % 2 == 0:
@@ -467,5 +468,6 @@ def count_even_odd(numbers):
 
     print(f'짝수 개수 : {count}')
     print(f'홀수 개수 : {len(numbers) - count}')
+
 
 count_even_odd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])

@@ -1,6 +1,16 @@
-user_number = []
-input('사용자 전화번호를 입력하시오>>> ')
+game_candidate = int(input('후보 게임 수를 입력하세요 >>> '))
 
-if len(user_number) != 13:
-    print('유효하지 않은 전화번호 형식입니다.')
+game_list = ' '
+
+dict = {
+
+}
+
+for i in range(game_candidate) :
+    game_list = input(f'{i+1}번째 게임 이름을 입력하세요 >>> ')
+
+pick = input('전체 투표 수를 입력하세요 >>> ')
+
+for key, value in range(dict) :
+    print(key, value)
 

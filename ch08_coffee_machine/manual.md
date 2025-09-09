@@ -51,3 +51,55 @@
 커피: 76g
 돈: $2.5
 모든 자원이 차감되면 사용자에게 "여기 라떼가 나왔습니다. 맛있게 드세요!" 라고 알려줍니다. 라떼를 선택한 경우.
+
+
+1. #
+2. '''
+3. print
+4. str
+5. float
+6. f-string
+7. +,
+8. int
+9. type()
+10. True
+11. elif
+12. OR
+13. and
+14. break
+15. range()
+16. 0, 9
+17. str_eample[]
+18. 0
+19. -1
+20. str_example[7:13]
+21. //
+22. def
+23. 매개변수
+24. 인수
+25. return
+26. call1()
+27. .upper
+28. len을 통해 길이를 알 수 있음
+29. list, tuple, dictionary, set
+30. append()
+31. insert()
+32. pop()
+33. remove()
+34. set()
+35. add()
+36. discard()
+37. dictionary_name[new_key] = value
+38. keys()
+39. values()
+40. items()
+41. join()
+42. class
+43. self
+44. 없음
+45. __init__
+46. del
+47. getter
+48. hanman_word_list 에 있는 word_list를 호출함
+49. .을 붙여야함
+50. hangman_arts 파일의 전체 데이터를 가지고 온다는 의미
