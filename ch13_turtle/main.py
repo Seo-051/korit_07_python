@@ -1,5 +1,5 @@
-from random import Random
 from turtle import Turtle, Screen
+from random import Random
 # turtle 모듈에서 Turtle, Screen 클래스를 import해왔습니다.
 
 t = Turtle()        # 터틀 객체를 생성했고, 객체명 t
@@ -10,6 +10,81 @@ t.shape('turtle')           # Turtle의 메서드를 호출했는데 argument가
 t.color('white')
 screen.bgcolor('black')
 
+# 랜덤 객체 생성
+random = Random()           # hangman할 때 썼었습니다.
+colors = [
+    'dark red',
+    "peru",
+    "dark khaki",
+    "sea green",
+    "crimson",
+    "cornsilk",
+    "pale violet red",
+    "dark slate blue",
+    "royal blue",
+    "papaya whip",
+    "khaki",
+    "dark sea green",
+    "CornflowerBlue",
+    "DarkOrchid",
+    "IndianRed",
+    "DeepSkyBlue",
+    "LightSeaGreen",
+    "wheat",
+    "SlateGray",
+    "SeaGreen",
+    "tomato",
+    "dark olive green",
+    "mint cream",
+    "sienna",
+    'light yellow'
+]
+
+# t.forward(100.3)
+# t.penup()
+# t.forward(100.3)
+# t.forward(100.3)
+# t.pendown()
+# t.forward(30)
+
+# 점선 그리는 반복문
+# for _ in range(10):
+#     t.forward(15)
+#     t.penup()
+#     t.forward(15)
+#     t.pendown()
+
+# .left(각도)
+# t.left(90)
+
+# t.forward(100)
+# t.left(90)
+# t.forward(100)
+# t.left(90)
+# t.forward(100)
+# t.left(90)
+# t.forward(100)
+# t.left(90)
+
+# for _ in range(3):
+#     t.forward(100)
+#     t.left(120)
+#
+# for _ in range(4):
+#     t.forward(100)
+#     t.left(90)
+#
+# for _ in range(5):
+#     t.forward(100)
+#     t.left(72)
+#
+# for _ in range(6):
+#     t.forward(100)
+#     t.left(60)
+
+# 그럼 오각형 / 육각형도 그려보세요.
+
+
 # 이상을 일반화 시키기 위해서 알 수 있는 것은
 '''
 삼각형일 때 120
@@ -19,22 +94,124 @@ screen.bgcolor('black')
 
 십각형일 때 36
 '''
-
-random = Random()
-colors=[
-    'dark red',
-]
 # n = int(input('몇각형을 만드시겠습니까? >>> '))
+# 얘는 도형 하나를 그리기 위한 반복문
 # for _ in range(n):
 #     t.forward(100)
 #     t.left(360/n)
 
+# 여러 개의 도형을 그리고 싶다면 도형을 그리는 반복문을 반복 -> 중첩 for
+# t.speed(59)
+# for i in range(3, 59):
+#     for _ in range(i):
+#         t.forward(100)
+#         t.left(360/i)
+#     t.color(random.choice(colors))
 
-for i in range(3, 11):
-    for _ in range(i):
-        t.forward(100)
-        t.left(360 / i)
+# 함수 설정
+# t.speed(59)
+# def draw_shape(n):
+#     for i in range(n):
+#         t.forward(100)
+#         t.left(360/n)
+#
+# for i in range(3, 11):
+#     draw_shape(i)
+#     t.color(random.choice(colors))
 
+#
+# def draw_shape(n):
+#     for i in range(n):
+#         t.forward(100)
+#         t.left(360/n)
+#     t.color(random.choice(colors))
+#
+# def drew_dotted_line():
+#     for _ in range(10):
+#         t.forward(5)
+#         t.penup()
+#         t.forward(5)
+#         t.pendown()
+#
+# def drew_dotted_shape(n):
+#     for _ in range(n):
+#         drew_dotted_line()
+#         t.left(360/n)
+#     t.color(random.choice(colors))
+#
+# for i in range(3, 11):
+#     drew_dotted_shape(i)
+#
+# t.speed(100)
+# # drew_dotted_shape(3)
+# screen.exitonclick()
+
+# t.forward(100)
+# print(t.heading())
+# t.left(90)
+# t.forward(100)
+# print(t.heading())
+# t.left(30)
+# t.forward(100)
+# print(t.heading())
+# t.right(30)
+# t.forward(100)
+# print(t.heading())
+# t.setheading(30)
+# t.forward(100)
+# print(t.heading())
+#
+# # .heading()의 return 값은 float
+# # .setheading()의 parameter가 float / return None
+#
+# # t.setheading(t.heading() + 100)
+#
+# t.color(random.choice(colors))
+# t.circle(100)
+# t.left(60)
+# t.color(random.choice(colors))
+# t.circle(100)
+# t.left(60)
+# t.color(random.choice(colors))
+# t.circle(100)
+# t.left(60)
+# t.color(random.choice(colors))
+# t.circle(100)
+# t.left(60)
+# t.color(random.choice(colors))
+# t.circle(100)
+# t.left(60)
+
+t.speed(0)
+
+# 예를 들어 10번만 반복하고 싶다면
+# for _ in range(10):
+#     t.color(random.choice(colors))
+#     t.circle(100)  # 원 그리는거 완료
+#     # 거북이 머리 다은 족으로 돌려서 다음 원이 겹치지 않게끔 하는 함수
+#     t.setheading(t.heading() + 36)
+# def draw_circle(number):
+#     for _ in range(number):
+#         t.color(random.choice(colors))
+#         t.circle(100)
+#         t.turtlesize(1)  # 원 그리는거 완료
+#         # 거북이 머리 다은 족으로 돌려서 다음 원이 겹치지 않게끔 하는 함수
+#         t.setheading(t.heading() + (360 / number))
+
+# 함수화를 위한 일반식을 main에 작성하겠습니다.
+n = 100
+
+for i in range(200):
+    t.forward(i)
+    t.turtlesize(1000)
+    t.color(random.choice(colors))
+    t.setheading(t.heading()+i)
+
+
+# draw_circle(360)
+# 이상의 코드에서의 문제점은
+# 1. 매개변수인 size_of_gap은 n번째 원과 n+1 번째 원의 각도타이를 나타내는 것 같은데,
+# 실제로는 반복횟수를 통재하고 있음
 
 
 
